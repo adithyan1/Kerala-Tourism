@@ -1,26 +1,180 @@
-body,
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* body,
 html {
 
   margin: 0px;
   padding: 0px;
   width: 100%;
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  /* background: url(/Kerala-Tourism/images/login-bg.jpg) no-repeat center center fixed;  */
+  font-family: 'Poppins', sans-serif;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  scroll-behavior: smooth;
+
+} */
+
+
+hr {
+  border: 6px dotted red;
+  border-top: none;
+  width: 4%;
+  background-color: white;
+  margin: 50px auto;
+  opacity: 0.5;
+}
+
+.welcome-box {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  z-index: 2;
+}
+
+/* .container {
+  margin-top: 2rem;
+} */
+
+.welcome-box {
+  position: relative;
+  height: 100%;
+}
+
+.welcome-box header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-box video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
 
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(8, 180, 85);
+  mix-blend-mode: overlay;
+}
 
-.container {
-  margin-top: 2rem;
+.text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h1{
+  display: inline;
+}
+
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 1.3em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
 }
 
 .container-fluid {
   padding-left: 0rem;
+}
+
+.container {
+  margin-top: 10%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.video-container {
+  position: absolute;
+  z-index: -1;
+}
+
+.social {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  /* filter: invert(1); */
+  margin-right: 50px;
+  transform: scale(0.5);
+  transition: 0.5s;
+  
+}
+
+.social li a:hover {
+  transform: scale(1) translateX(15px);
+}
+
+@media (max-width: 991px) {
+  .showcase,
+  .showcase header {
+      padding: 40px;
+  }
+
+  .text h2 {
+      font-size: 3em;
+  }
+
+  .text h3 {
+      font-size: 2em;
+  }
 }
 
 .buffer {
@@ -28,6 +182,7 @@ html {
 }
 
 .img-fluid {
+  
   max-width: 10rem;
 }
 
@@ -35,17 +190,33 @@ html {
   font-weight: 900;
   text-transform: uppercase;
   border-radius: 300px;
+  margin-right: 5rem;;
 }
 
 .btn-primary {
   background-color: rgb(250, 117, 9) ;
   border-color: rgb(250, 117, 9) ;
+  transition: 0.5s;
 }
 
 .btn-primary:hover {
   background-color: orange;
   border-color: orange ;
-  border-width: 4px;
+  transform: scale(1.2) translateY(-10px);
+}
+
+form .btn-primary:hover {
+  transform: scale(1.2) translateY(10px);
+}
+
+.btn-info {
+  transition: 0.5s;
+}
+
+.btn-info:hover {
+  background-color: rgb(139, 225, 236);
+  border-color: rgb(133, 219, 215) ;
+  transform: scale(1.2) translateX(5px);
 }
 
 .btn-xl {
@@ -53,6 +224,60 @@ html {
 }
 
 .homepage-video {
-  width: 100%;
-  height: 30rem;
+  
+  height: 45rem;
+}
+
+.contact {
+  position: absolute;
+  top: 90%;
+  left: 25%;
+  color: rgb(252, 6, 6);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.col-md-2 {
+  padding-right: 0;
+}
+
+.trail_dist1 {
+  margin-left: 70%;
+}
+
+.trail_dist2 {
+  margin-right: 70%;
+}
+
+#districts {
+  padding: 1em;
+  height: 100vh;
+}
+
+#districts img {
+  height: 20vh;
+  max-width: 30vh;
+}
+
+#districts img:hover {
+  margin-bottom: 10px;
+  transform: scale(1.2);
+  max-width: 30vh;
+  opacity: 50%;
+}
+
+#districts p {
+  text-align: center;
+}
+
+#districts a {
+  text-decoration: none;
+  color:rgb(250, 117, 9);
+  font-weight: 600;
+}
+
+.signup-gif {
+  position: absolute;
+  top: 20vh;
+  left: 10vh;
 }
